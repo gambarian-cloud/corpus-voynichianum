@@ -1,6 +1,6 @@
 # Corpus Voynichianum
 
-*The open library of the Voynich manuscript.* Compiled by Alexander S. Gambarian (Gamba).
+*The open library of the Voynich manuscript.* Compiled by Alexander S. Gambarian (Gamba, [x.com/gambarian](https://x.com/gambarian)).
 
 
 
