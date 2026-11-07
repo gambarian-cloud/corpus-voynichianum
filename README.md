@@ -2,6 +2,52 @@
 
 *The open library of the Voynich manuscript.* Compiled by Alexander S. Gambarian (Gamba, [x.com/gambarian](https://x.com/gambarian)).
 
+## Overview
+
+### What it is
+Corpus Voynichianum is a comprehensive, annotated database of what has been written, said and filmed about the Voynich manuscript. The manuscript is held at Yale University (Beinecke Rare Book and Manuscript Library, MS 408). It has 102 parchment leaves written in an unknown script, and its parchment has been radiocarbon-dated to 1404-1438.
+
+The collection runs from Georg Baresch's 1639 letter to Athanasius Kircher to forum posts of November 2026. It also keeps older books the manuscript is often compared with, such as printed herbals and Trithemius's Polygraphia.
+
+### Why it exists
+Writing on the manuscript is scattered across journals, newspapers, mailing lists, forums, blogs and videos, in many languages. Most of it is hard to find, and new readings of the manuscript often repeat ideas published decades earlier. The collection puts these sources in one place, in a form that a person or a program can search, so that anyone can check what has already been said before proposing something new.
+
+### Who made it
+Alexander S. Gambarian compiled the collection in October and November 2026, working with several AI models (Claude, GPT, Gemini, and Qwen run locally). The models searched, read, extracted and classified sources and checked each other's work. The compiler decided what to include. This description was drafted by an AI model (Claude) and reviewed by the compiler. The project is non-commercial and will stay so.
+
+### What is inside
+The release counts two units. A record is one catalogued item: an article, a book, a video, a forum thread, a blog post. There are 70,709 records, and one real work can have more than one record. A text is a piece of text attached to a record: the body of an article, one forum reply, one mailing-list message, a video transcript, an abstract. There are 120,463 texts with a body, about 1.09 GB of UTF-8, and 64,773 records have at least one. A blog post on Cipher Mysteries with its comments is one record and 909 texts.
+
+Every record is annotated with its kind, date, language and author where known, and with the address of its source.
+
+The contents, listed by their likely value for research rather than by size:
+
+- 2,114 scholarly works: journal articles, theses, preprints and conference papers, with full text where it is openly available. The collection holds 40 of the 44 works on the manuscript listed in Mary E. D'Imperio's 1978 bibliography.
+- 700 archival items, such as letters, catalogues and papers on the manuscript's history, and 2,251 newspaper and magazine items.
+- 32,873 messages of the Voynich mailing list, December 1991 to February 2013, the main meeting place of researchers in those years.
+- A folio index that links each leaf of the manuscript to the texts that discuss it.
+- 9,872 links between records, such as a reply to a paper, a rebuttal, or two copies of one work.
+- 417 claimed results and experiments, catalogued so that a new proposal can be checked against earlier ones.
+- 1,062 code and data items: transcriptions of the script, statistical tools, datasets.
+- 14,749 short English summaries written by machine, 6,355 of them for works in 62 other languages, so that an English reader can find work published in Russian, Polish, Chinese or Japanese.
+- 38,913 records from forums and discussion sites (Voynich Ninja, Reddit and others), with 28,220 forum replies.
+- 759 books, often as a catalogue description without text when the book is still sold.
+- 9,178 blog posts and web pages, and 18,648 comments on the Cipher Mysteries blog.
+- 7,688 videos and podcasts, with 8,863 machine transcripts.
+- 5,876 social media posts, 490 works of art, music and fiction, and 1,261 other items.
+
+Languages, duplicate groups and links between records were assigned by machine and are provisional.
+
+### Where it comes from and how it was collected
+Everything was collected from openly accessible sources: the open sections of the Voynich Ninja forum, the mailing-list archives kept at voynich.net, voynich.nu and Jorge Stolfi's mirror at Unicamp, blogs and their comments, Reddit, YouTube and podcast pages, scholarly repositories and catalogues, free newspaper archives such as Chronicling America, and the Internet Archive. Searches were run in several dozen languages. Each record keeps the address of its source where one exists; 1,026 records have none.
+
+The records come from about 3,400 websites, or about 4,300 if each blog on a shared platform such as WordPress or Blogspot is counted separately. Five sources give two thirds of the records: the mailing-list archives at voynich.net and voynich.nu, YouTube, Bluesky and the Voynich Ninja forum. About 2,300 sites gave a single record each.
+
+Speech in videos and podcasts was transcribed by machine. Scanned newspapers and books were read by optical character recognition. Duplicates were grouped by AI models, and the groupings are marked as provisional.
+
+The sections below give the details: how to read a record, the files, the rights rule, what was left out and why, and how to cite.
+
+
 
 
 A catalogue and text collection about the Voynich manuscript: research papers, theses, books primarily as records, press, blogs, machine transcripts, social posts, code and data, experiments, public forum material and the mailing list **1991–2013**.
