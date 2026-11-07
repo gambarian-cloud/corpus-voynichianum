@@ -26,7 +26,7 @@ The contents, listed by their likely value for research rather than by size:
 - 700 archival items, such as letters, catalogues and papers on the manuscript's history, and 2,251 newspaper and magazine items.
 - 32,873 messages of the Voynich mailing list, December 1991 to February 2013, the main meeting place of researchers in those years.
 - A folio index that links each leaf of the manuscript to the texts that discuss it.
-- 9,872 links between records, such as a reply to a paper, a rebuttal, or two copies of one work.
+- 9,872 links between records: other copies or probable copies of the same work, parts of larger works, editions and reprints, links from an experiment to its code or data, and 77 reviews of a work. Replies and rebuttals between works are not linked yet; that is planned for the next version.
 - 417 claimed results and experiments, catalogued so that a new proposal can be checked against earlier ones.
 - 1,062 code and data items: transcriptions of the script, statistical tools, datasets.
 - 14,749 short English summaries written by machine, 6,355 of them for works in 62 other languages, so that an English reader can find work published in Russian, Polish, Chinese or Japanese.
@@ -156,6 +156,14 @@ print(shard[["text_id", "kind", "chars"]].head())
 Stop before loading `shard` for metadata-only work. `work_id` joins texts to `works.id`. Use `text_id` for individual texts; do not cite changeable duplicate-group ids. The text index locates rows and shards, and `manifest.json` lists files and checksums.
 
 `EXAMPLES.md` holds three worked queries with their output on this export: a literal name search, the individually saved posts of one forum member, and experiments with their code links and replication checks. The search is not exhaustive, whole-thread extracts are reported apart from one person's posts, and replication statuses include unsuccessful or inconclusive checks.
+
+## Known errors in 1.0
+
+Found on 7 November 2026, after publication; all will be fixed in the next version. Corrections from readers are welcome.
+
+- **Annotation authorship.** In `machine_annotations_en`, 13,140 of the 13,612 rows marked `gpt-6.1-sol` were written by Claude Haiku. The other 472 are being traced.
+- **Annotations that fail our own check.** 2,656 annotations do not pass the program check used for the rest (2-3 sentences of 40-70 words; every name and number present in the source). They will be rewritten or removed.
+- **Links between records.** An earlier wording said the links include replies and rebuttals. They do not yet: the 9,872 links are copies, parts, editions, experiment-to-code links and 77 reviews.
 
 ## Licence and reuse
 
@@ -292,7 +300,7 @@ Every file and directory listed here is in the dataset (https://huggingface.co/d
 Full machine translations (`translation_en`, `translation_gemini`) carry `MACHINE_TRANSLATION` and a visible header: made by the library, not verified or approved by the original author. Read the original source.
 
 - `texts-00000-of-NNNNN.parquet` and `.jsonl`: the same rows in alternative formats. Each text row has `work_id, text_id, kind, quality_flag, author, title, chars, sha256, source_url, source_ref, header, body, body_status, masked`. Each file is at most **500 MB**. Choose one format; do not count both copies as separate texts.
-- `machine_annotations_en.csv` and `.parquet`: 14,749 English annotations. **They are written by a machine, not by the author or the publisher. An annotation describes the work and is no substitute for it.** Of the annotations tied to published texts, 7,258 use English source texts, 6,355 use other recorded languages, and 0 have no recorded source language. 1,136 annotations have no text_id; 376 of those records nevertheless carry 752 published texts, which can be short descriptions or other copies. Models: Claude Opus, Qwen 3.8, gpt-6.1-sol. `basis` records whether the model received a text extract or catalogue metadata. Opening extracts were up to 2,500 characters in L packs and up to 6,000 in M packs; `chars_source` gives the saved input length, or 0 if unavailable. The minimum annotation length is 80 characters. Join by `work_id`; read the source before relying on an annotation.
+- `machine_annotations_en.csv` and `.parquet`: 14,749 English annotations. **They are written by a machine, not by the author or the publisher. An annotation describes the work and is no substitute for it.** Of the annotations tied to published texts, 7,258 use English source texts, 6,355 use other recorded languages, and 0 have no recorded source language. 1,136 annotations have no text_id; 376 of those records nevertheless carry 752 published texts, which can be short descriptions or other copies. Models: Claude Haiku, Claude Opus, Qwen 3.8, gpt-6.1-sol. **Correction (7 November 2026):** in the `model` column, 13,140 of the 13,612 rows marked `gpt-6.1-sol` were written by Claude Haiku; the other 472 are being traced. See "Known errors in 1.0". `basis` records whether the model received a text extract or catalogue metadata. Opening extracts were up to 2,500 characters in L packs and up to 6,000 in M packs; `chars_source` gives the saved input length, or 0 if unavailable. The minimum annotation length is 80 characters. Join by `work_id`; read the source before relying on an annotation.
 - `works_card.csv` and `.parquet`: a supplement to the card, one row per record: year in four digits and how precise it is, language, subject, unit, who wrote the short text. Built by a program, not checked by a person.
 - `vocabulary.csv` and `.parquet`: every raw value of `class`, text `kind`, `access_status`, `record_role` and `subject`, with a normalized value, an English label and a count.
 - `folio_index.csv` and `.parquet`: which published texts name which leaf of the manuscript, by the standard notation f1r to f116v. Built by a program from the pattern. **A mention does not mean the text is about that leaf.** Forms such as "folio 67 recto" or "fol. 67r" are not caught, and a number may name a leaf that is lost. `text_type=transliteration` marks detected interlinear/IVTFF files and manuscript transcriptions; other rows are `text`. Detection is provisional.
