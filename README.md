@@ -43,6 +43,50 @@ Everything was collected from openly accessible sources: the open sections of th
 
 The records come from about 3,400 websites, or about 4,300 if each blog on a shared platform such as WordPress or Blogspot is counted separately. Five sources give two thirds of the records: the mailing-list archives at voynich.net and voynich.nu, YouTube, Bluesky and the Voynich Ninja forum. About 2,300 sites gave a single record each.
 
+#### Platform by platform
+
+Counted by the host of each record's source address in `works` (70,709 records in v1.0); a record counts once, and records without an address are under "Other websites".
+
+| Platform | Records | Share |
+|---|---:|---:|
+| Mailing-list archives (voynich.net, voynich.nu, Unicamp mirror) | 33,722 | 47.7 % |
+| YouTube | 5,788 | 8.2 % |
+| Bluesky | 5,317 | 7.5 % |
+| Voynich Ninja forum | 3,053 | 4.3 % |
+| Reddit | 2,582 | 3.7 % |
+| WordPress blogs | 1,270 | 1.8 % |
+| GitHub | 750 | 1.1 % |
+| Bilibili | 648 | 0.9 % |
+| Apple Podcasts | 616 | 0.9 % |
+| Internet Archive | 532 | 0.8 % |
+| X / Twitter | 335 | 0.5 % |
+| Blogspot blogs | 326 | 0.5 % |
+| Wikipedia | 224 | 0.3 % |
+| Hacker News | 219 | 0.3 % |
+| Spotify | 63 | 0.1 % |
+| Substack | 63 | 0.1 % |
+| Mastodon | 62 | 0.1 % |
+| Medium | 45 | 0.1 % |
+| Academia.edu | 42 | 0.1 % |
+| ResearchGate | 41 | 0.1 % |
+| arXiv | 37 | 0.1 % |
+| Telegram | 34 | <0.1 % |
+| Habr | 24 | <0.1 % |
+| Stack Exchange | 17 | <0.1 % |
+| Zhihu | 15 | <0.1 % |
+| Facebook | 12 | <0.1 % |
+| Vimeo | 5 | <0.1 % |
+| Dailymotion | 4 | <0.1 % |
+| VKontakte | 2 | <0.1 % |
+| Weibo | 1 | <0.1 % |
+| Instagram | 1 | <0.1 % |
+| TikTok | 0 | 0 % |
+| Other websites (3,916 addresses, led by doi.org, ciphermysteries.com, voynichrevisionist.com, mysteriesdept.com, zenodo.org and note.com) | 14,843 | 21.0 % |
+
+Of the 7,688 video and podcast records, 5,766 are on YouTube, 634 on Bilibili, 615 on Apple Podcasts, 59 on Spotify, 34 on the Internet Archive and 580 elsewhere.
+
+Some platforms are thin or empty here: TikTok, Instagram, Facebook, VKontakte and Weibo. Collection used open pages only, with no logins. If you know where the manuscript is discussed and that place is missing or thin in this table, open an issue on GitHub or write to gambarian@gmail.com.
+
 Speech in videos and podcasts was transcribed by machine. Scanned newspapers and books were read by optical character recognition. Duplicates were grouped by AI models, and the groupings are marked as provisional.
 
 The sections below give the details: how to read a record, the files, the rights rule, what was left out and why, and how to cite.
